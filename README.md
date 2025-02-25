@@ -1,6 +1,6 @@
 # My Project
 
-Welcome to my Test project! This project contains bank carousel images followed by list of banks with search bar. When user enter text, it filter the labels in the
+This project contains bank carousel images followed by list of banks with search bar. When user enter text, it filter the labels in the
 list based on the user input. 
 
 ## Screenshot
