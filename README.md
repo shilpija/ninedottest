@@ -5,7 +5,7 @@ list based on the user input.
 
 ## Screenshot
 
-![Screenshot](app/images/screenshot.jpg)
+![Screenshot](https://github.com/shilpija/ninedottest/blob/master/app/images/Screenshot.jpg)
 
 Please refer to the screenshot above for a visual representation of the project.
 
