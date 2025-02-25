@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background">
+
+    <!-- ScrollView to allow scrolling of entire content -->
+    <android.widget.ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Image Carousel with Dots Indicator -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin250"
+                android:padding="@dimen/margin16">
+
+                <!-- ViewPager or RecyclerView for Image Carousel -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/imageCarousel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Dots Indicator below the Image Carousel -->
+                <LinearLayout
+                    android:id="@+id/dotIndicators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Search Bar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/dot_size"
+                android:padding="@dimen/margin16"
+                android:background="@color/material_dynamic_neutral50">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dot_size"
+                    android:background="@drawable/search_box_background">
+
+
+                    <!-- Search Icon -->
+                    <ImageView
+                        android:id="@+id/search_icon"
+                        android:layout_width="@dimen/margin24"
+                        android:layout_height="@dimen/margin24"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/search"
+                        app:tint="@android:color/darker_gray" />
+
+                    <!-- Search EditText -->
+                    <EditText
+                        android:id="@+id/search"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/search_icon"
+                        android:background="@null"
+                        android:hint="Search"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/margin8"
+                        android:paddingEnd="@dimen/margin8"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/margin16" />
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+            <!-- RecyclerView to show list of items -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:layout_marginBottom="@dimen/margin16"
+                android:padding="@dimen/margin16"/>
+
+        </android.widget.LinearLayout>
+    </android.widget.ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
